@@ -138,6 +138,14 @@ footer {
     background-size: contain;
 }
 
+#Primer_loading p {
+    color: #ffffff;
+}
+
+#Primer_loading a {
+    color: #ffffff;
+}
+
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
