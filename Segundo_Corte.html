@@ -25,17 +25,39 @@
     <div id="Primer_loading">
         <h1>El Casillero de CR</h1>
         
+
         <button onclick="showPythonCode1()">Mostrar Codigo Python 1</button>
         <button onclick="showPythonCode2()">Mostrar Código Python 2</button>
     
         <textarea id="pythonCode1" class="pythonCode" readonly></textarea>
         <textarea id="pythonCode2" class="pythonCode" readonly></textarea>
+        <h2>Resumen del Segundo corte</h2>
+        <div>
+            <h2 class="ref">Para más detalles, visita <a href="https://github.com/CruizFloMik/7s.github.io/blob/main/MapFilter.py" target="_blank">este enlace</a>.</h2>
+        </div>
+        <p class="parrafo">Resumen del segundo corte de Programación Funcional en Python:</p>
+        <p class="parrafo">Patrones de diseño:
+            Los patrones de diseño son soluciones a problemas comunes en el desarrollo de software. Pueden ayudarnos a escribir código más eficiente, legible y mantenible.</p>
+        <p class="parrafo">Patrones creacionales:
+            Los patrones creacionales se utilizan para crear objetos. Algunos patrones creacionales comunes son:</p>
+        <p class="parrafo">Singleton:garantiza que solo se cree una instancia de una clase.</p>
+        <p class="parrafo">Builder: crea objetos complejos paso a paso.</p>
+        <p class="parrafo">Observer: permite que un objeto notifique a otros objetos sobre cambios en su estado.</p>
+        <p class="parrafo">Strategy: permite que un objeto cambie su comportamiento en tiempo de ejecución.</p>
+        <p class="parrafo">Adapter: permite que dos clases que no son compatibles se comuniquen entre sí.</p>
+        <h2>Los patrones de diseño son una herramienta poderosa que nos puede ayudar a escribir código mejor. Al utilizar patrones de diseño, podemos:
+
+            Escribir código más eficiente y legible,
+            hacer que nuestro código sea más fácil de mantener,
+            evitar problemas comunes de diseño.</h2>
+        
     </div>
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
     <script>    
         function showPythonCode1() {
             document.getElementById("pythonCode1").style.display = "block";
             document.getElementById("pythonCode2").style.display = "none";
+            
 
             // Cargar y mostrar el código de Python
             const pythonCode = `
