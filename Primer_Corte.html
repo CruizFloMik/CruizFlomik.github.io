@@ -8,11 +8,31 @@
 </head>
 <body>
 
+
 <div id="Primer_loading">
     <h1>El Casillero de CR</h1>
-    
+
     <button onclick="showPDF()">Mostrar Mapa Mental</button>
-    <button onclick="showPythonCode()">Mostrar Código Python</button>
+    <button onclick="showPythonCode1()">Mostrar Código Python 1</button>
+    <button onclick="showPythonCode2()">Mostrar Código Python 2</button>
+    <h2>Resumen del primer corte</h2>
+    <div>
+        <h2 class="ref">Para más detalles, visita <a href="https://github.com/CruizFloMik/7s.github.io/blob/main/MapFilter.py" target="_blank">este enlace</a>.</h2>
+    </div>
+    <p class="parrafo">En el primer corte de Programación Funcional en Python vimos los siguientes conceptos:</p>
+
+    <p class="parrafo">Programación funcional: un paradigma de programación que se centra en el uso de funciones puras y composición.</p>
+        <p class="parrafo"> Funciones puras: funciones que no tienen efectos secundarios, es decir, que no modifican el estado del programa.</p>
+            <p class="parrafo">Funciones de orden superior: funciones que pueden tomar otras funciones como argumentos o devolverlas como resultado.</p>
+                <p class="parrafo">Funciones lambda: funciones anónimas que se pueden usar en lugar de funciones definidas explícitamente.</p>
+        Funciones reduce, map y filter
+        
+        <p class="parrafo">Las funciones reduce, map y filter son funciones de orden superior que nos permiten aplicar una función a los elementos de una secuencia de forma eficiente.</p>
+        
+        <p class="parrafo">reduce(): aplica una función iterativamente a los elementos de una secuencia, produciendo un único valor como resultado.</p>
+        <p class="parrafo">map(): aplica una función a cada elemento de una secuencia, produciendo una nueva secuencia con los resultados.</p>
+        <p class="parrafo">filter(): devuelve una nueva secuencia con los elementos de una secuencia que cumplen una condición.</p>
+    
 
     <div id="pdfViewer" style="display: none;">
         <iframe id="pdfFrame" src="Mapa_Mental_Cruiz.pdf" width="90%" height="600px"></iframe>
@@ -27,11 +47,11 @@
         document.getElementById("pythonCode").style.display = "none";
     }
 
-    function showPythonCode() {
+    function showPythonCode1() {
         document.getElementById("pdfViewer").style.display = "none";
         document.getElementById("pythonCode").style.display = "block";
 
-        // Cargar y mostrar el código de Python
+        // Cargar y mostrar el primer código de Python
         const pythonCode = `
 # CODIGO USANDO MAP Y FILTER VISTOS EN EL PRIMER CORTE
 def convertirAFahrenheit(temperatura):
@@ -55,6 +75,44 @@ listaTemperaturasMax = list(map(obtenerTemperaturasMaximas, listaTemperaturas))
 
 print("Temperaturas en Fahrenheit:", listaTemperaturasFahrenheit)
 print("Temperaturas máximas del día:", listaTemperaturasMax)
+`;
+
+        document.getElementById("pythonCode").value = pythonCode;
+    }
+
+    function showPythonCode2() {
+        document.getElementById("pdfViewer").style.display = "none";
+        document.getElementById("pythonCode").style.display = "block";
+        
+
+        // Cargar y mostrar el segundo código de Python
+        const pythonCode = `
+## **Cálculo del promedio de las notas de los estudiantes utilizando la función reduce()**
+
+# La función reduce() nos permite aplicar una función iterativamente a los elementos de una secuencia,
+#produciendo un único valor como resultado.
+
+# En este ejemplo, la función reduce() se usa para calcular el promedio de las notas de los estudiantes.
+#La función lambda() que se pasa a la función reduce() suma los dos primeros elementos de la secuencia 
+#y devuelve el resultado.
+
+
+import random
+
+# Importamos la función reduce()
+from functools import reduce
+
+# Definimos una función lambda para sumar dos números
+sumar = lambda x, y: x + y
+
+# Generamos una lista con las notas de los estudiantes
+notas = [random.randint(0, 10) for i in range(100)]
+
+# Calculamos el promedio de las notas
+promedio = reduce(sumar, notas) / len(notas)
+
+# Imprimimos el promedio
+print(f"El promedio de las notas es: {promedio}")
 `;
 
         document.getElementById("pythonCode").value = pythonCode;
